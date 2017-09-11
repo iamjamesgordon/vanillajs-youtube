@@ -4,9 +4,11 @@
 <meta charset="utf-8">
 <title>Javascript and CSS3</title>
 <link rel="stylesheet" href="style.css" />
-<script src="script.js" type="application/javascript"></script>
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<script src="https://www.youtube.com/iframe_api" type="application/javascript"></script>
+<script src="script.js" type="application/javascript"></script>
+<script src="youtube-script.js" type="application/javascript"></script>
 </head>
 
 <body>
@@ -40,7 +42,18 @@
 
 
 	<div id="hero-banner">
-    	<iframe width="560" height="315" src="https://www.youtube.com/embed/yBHx7_bkWv0?autoplay=0&showinfo=0&controls=0" frameborder="0" controls="0" allowfullscreen></iframe>
+    
+    	<!--<iframe src="https://www.youtube.com/embed/yBHx7_bkWv0?autoplay=0&showinfo=0&controls=0" frameborder="0" controls="0" allowfullscreen></iframe>-->
+        
+        <div id="y-t-buttons">
+            <button id="y-t-play-pause">Pause</button>
+            <button id="y-t-stop">Stop</button>
+        </div>
+        
+        <div id="hero-banner-overlay"></div>
+        
+        <div id="hero-banner-iframe"></div>
+        
     </div>
 
 	
@@ -105,7 +118,6 @@
 
 	<footer id="main-footer">
     </footer>
-    
         
 </div>
 

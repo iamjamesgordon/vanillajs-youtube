@@ -17,7 +17,7 @@ window.onload = function() {
 			
 			this.classList.remove("active");
 			setTimeout(function() {
-			document.querySelector("#main-sidebar").classList.remove("active");
+				document.querySelector("#main-sidebar").classList.remove("active");
 			}, 500);
 			document.querySelector("ul#m-s-nav").classList.remove("active");			
 			navLinksEffect();			
@@ -36,7 +36,7 @@ window.onload = function() {
 			
 			for(i = 0; i < navLinks.length; i++) {
 				
-					navLinks[i].style.opacity = 1;
+				navLinks[i].style.opacity = 1;
 				
 			}
 			
@@ -44,13 +44,12 @@ window.onload = function() {
 			
 			for(i = 0; i < navLinks.length; i++) {
 				
-					navLinks[i].style.opacity = 0;
+				navLinks[i].style.opacity = 0;
 				
 			}
 			
 		}
 		
-	}
-	
+	} // navLinksEffects	
 		
-};
+}; // Window Onload //////////////////
