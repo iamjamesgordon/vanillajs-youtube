@@ -2,7 +2,7 @@
 //    after the API code downloads.
 var player;
 function onYouTubeIframeAPIReady() {
-  player = new YT.Player('hero-banner-iframe', {
+  player = new YT.Player('y-t-hero-banner-iframe', {
 	height: '390',
 	width: '640',
 	videoId: 'yBHx7_bkWv0',
@@ -35,7 +35,8 @@ function onPlayerStateChange(event) {
 	if (event.data == YT.PlayerState.ENDED) {
 		document.querySelector("#y-t-play-pause").classList.remove("active");
 		document.querySelector("#y-t-play-pause").innerHTML = "Play";
-		setInterval(videoScroll, 10);
+		ytHeroBannerFadeOut();
+		atHeroBannerFadeIn();
 	}
 	
 }
@@ -58,23 +59,39 @@ function playPauseVid() {
 	
 }
 
-function videoScroll() {
-	
-	var heroBottom = document.querySelector("#hero-banner").offsetHeight;
-	
-	var i = 0;
-	
-	while(i < 6) {
+function ytHeroBannerFadeOut() {
+	document.querySelector("#y-t-hero-banner").style.opacity = 0;
+}
+
+function atHeroBannerFadeIn() {
+
+		var atHeroBanner = document.querySelector("#at-hero-banner");
+		var h1 = document.querySelector("#at-hero-banner h1");
+		var h2 = document.querySelector("#at-hero-banner h2");
+		var icon = document.querySelector("#at-hero-banner i");
+
+		setTimeout(function(){
 		
-		i++;
-		
-		if ( i === 5 ) {
-			break;	
-		} else {
-			alert(i);	
-		}
+			atHeroBanner.style.opacity = 1;
+	
+				setTimeout(function(){
+			
+					h1.style.opacity = 1;
+			
+						setTimeout(function() {
+				
+							h2.style.opacity = 1;
+
+								setTimeout(function() {
+				
+									icon.style.opacity = 1;
+				
+								}, 700);
+				
+						}, 700);
+			
+				}, 500);
+	
+		}, 10);	
 
 	}
-	
-	
-}

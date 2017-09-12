@@ -159,13 +159,16 @@ ul#m-s-nav li {
 
 /****----------------- Hero Banner ------------------------****/
 
-#hero-banner {
+#y-t-hero-banner {
 	width: 100%;
 	height: 100%;
 	position: relative;
+	opacity: 1;
+	transition: all ease 1.5s;
+	z-index: 0;
 }
 
-#hero-banner-overlay {
+#y-t-hero-banner-overlay {
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -175,7 +178,7 @@ ul#m-s-nav li {
 	z-index: 2;
 }
 
-#hero-banner-iframe {
+#y-t-hero-banner-iframe {
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -183,7 +186,7 @@ ul#m-s-nav li {
 	left: 0;
 }
 
-#hero-banner iframe {
+#y-t-hero-banner iframe {
 	width: 100%;
 	height: 100%;
 	position: relative;
@@ -207,6 +210,52 @@ ul#m-s-nav li {
 #y-t-buttons button:hover {
 	background: white;
 	color: black;
+}
+
+#at-hero-banner {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: black;
+	opacity: 0;
+	transition: all ease 1.5s;
+	z-index: 1;
+}
+
+#at-hero-banner-inner {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	margin: auto;
+	text-align: center;
+	color: white;
+}
+
+#at-hero-banner h1 {
+	font-size: 2.5em;
+	text-transform: uppercase;
+	opacity: 0;
+	transition: all ease 1.5s;
+}
+
+#at-hero-banner h2 {
+	font-size: 1.2em;
+	text-transform: uppercase;
+	color: #f2f2f2;
+	opacity: 0;
+	transition: all ease 1.5s;
+}
+
+#at-hero-banner i {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 50px;
+	color: white;
+	opacity: 0;
+	cursor: pointer;
 }
 
 /****----------------- Tutorials ------------------------****/
