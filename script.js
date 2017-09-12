@@ -50,6 +50,6 @@ window.onload = function() {
 			
 		}
 		
-	} // navLinksEffects	
+	} // navLinksEffects
 		
 }; // Window Onload //////////////////

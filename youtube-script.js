@@ -1,7 +1,6 @@
 //    This function creates an <iframe> (and YouTube player)
 //    after the API code downloads.
 var player;
-var banner = document.querySelector("#hero-banner");
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('hero-banner-iframe', {
 	height: '390',
@@ -23,29 +22,22 @@ function onYouTubeIframeAPIReady() {
   });
 }
 
-//   The API will call this function when the video player is ready.
+// The API will call this function when the video player is ready.
 function onPlayerReady(event) {
   event.target.playVideo();
   playPauseVid();
-  stopVideo();
 }
 
-//    The API calls this function when the player's state changes.
-//    The function indicates that when playing a video (state=1),
-//    the player should play for six seconds and then stop.
-var done = false;
 
+// The API calls this function when the player's state changes.
 function onPlayerStateChange(event) {
-  if (event.data == YT.PlayerState.PLAYING && !done) {
-	setTimeout(stopVideo, 6000);
-	done = true;
-  }
-}
 
-function stopVideo() {
-	document.querySelector("#y-t-stop").onclick = function() {
-		player.stopVideo();
+	if (event.data == YT.PlayerState.ENDED) {
+		document.querySelector("#y-t-play-pause").classList.remove("active");
+		document.querySelector("#y-t-play-pause").innerHTML = "Play";
+		setInterval(videoScroll, 10);
 	}
+	
 }
 
 function playPauseVid() {
@@ -63,5 +55,26 @@ function playPauseVid() {
 		}
 		
 	};
+	
+}
+
+function videoScroll() {
+	
+	var heroBottom = document.querySelector("#hero-banner").offsetHeight;
+	
+	var i = 0;
+	
+	while(i < 6) {
+		
+		i++;
+		
+		if ( i === 5 ) {
+			break;	
+		} else {
+			alert(i);	
+		}
+
+	}
+	
 	
 }
