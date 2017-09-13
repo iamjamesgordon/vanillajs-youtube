@@ -25,11 +25,13 @@ function onYouTubeIframeAPIReady() {
 // The API will call this function when the video player is ready.
 function onPlayerReady(event) {
   event.target.playVideo();
-  playPauseVid();
+  player.mute();
+  videoEnd();	
 }
 
 
 // The API calls this function when the player's state changes.
+
 function onPlayerStateChange(event) {
 
 	if (event.data == YT.PlayerState.ENDED) {
@@ -56,6 +58,24 @@ function playPauseVid() {
 		}
 		
 	};
+	
+}
+
+function videoEnd() {
+	
+	var vidLength = player.getDuration();
+  
+  setInterval(function() {
+		
+	var currentTime = player.getCurrentTime().toFixed(2);
+  
+	if (currentTime > vidLength - 3.00 && currentTime < vidLength - 1.50) {
+		ytHeroBannerFadeOut();
+		atHeroBannerFadeIn();
+		clearInterval(); 
+	}
+	  
+  }, 100 );
 	
 }
 
