@@ -187,7 +187,7 @@ ul#m-s-nav li {
 }
 
 #y-t-hero-banner iframe {
-	width: 100%;
+	width:s;
 	height: 100%;
 	position: relative;
 	z-index: 1;
@@ -257,6 +257,22 @@ ul#m-s-nav li {
 	opacity: 0;
 	cursor: pointer;
 }
+
+
+/****----------------- Intro copy ------------------------****/
+
+#intro-wrapper {
+	width: 760px;
+	margin: auto;
+	padding: 50px 0;
+}
+
+#intro-gallery {
+	width: 100%;
+	position: relative;
+}
+
+
 
 /****----------------- Tutorials ------------------------****/
 
