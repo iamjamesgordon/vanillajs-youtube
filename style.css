@@ -11,11 +11,17 @@ html, body {
 
 * {
 	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
 h1, h2, h3, h4, p {
 	margin: 0;
 	padding: 0;
+}
+
+h1 {
+	padding-bottom: 15px;
 }
 
 button {
@@ -267,12 +273,38 @@ ul#m-s-nav li {
 	padding: 50px 0;
 }
 
+#intro-wrapper:after {
+    content:'';
+    display:block;
+    clear: both;
+}
+
 #intro-gallery {
 	width: 100%;
 	position: relative;
 }
 
+#intro-gallery div {
+	width: 33.3333%;
+	float: left;
+	padding: 0.5px;
+}
 
+/*#intro-gallery div:nth-child(1), #intro-gallery div:nth-child(2), #intro-gallery div:nth-child(3) {
+	padding-bottom: 0;
+}*/
+
+.i-g-img {
+	width: 100%;
+	height: auto;
+	display: block;
+	transition: all ease 0.5s;
+	opacity: 1;
+}
+
+.i-g-img.active {
+	opacity: 0.5;
+}
 
 /****----------------- Tutorials ------------------------****/
 

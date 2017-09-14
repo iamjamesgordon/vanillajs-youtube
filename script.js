@@ -2,8 +2,9 @@
 
 window.onload = function() {
 	
+	////////////////////////////////////
 	// Navbar animations
-	
+	///////////////////////////////////
 	document.querySelector("#m-s-hamburger").onclick = function() {
 		
 		if(this.className !== "active") {
@@ -51,5 +52,41 @@ window.onload = function() {
 		}
 		
 	} // navLinksEffects
-		
+	
+	////////////////////////////////////
+	// Image swap animations
+	///////////////////////////////////	
+	
+	setTimeout(imgSwap, 1000);
+
+	function imgSwap() {	
+	
+		setInterval(function() {
+	
+			var images = document.querySelectorAll(".i-g-img");
+					
+			var i1 = Math.floor(Math.random() * images.length);
+			var i2 = Math.floor(Math.random() * images.length);
+			
+			// alert(i1 + " " + i2);
+			
+			var image1Src = images[i1].getAttribute("src");
+			var image2Src = images[i2].getAttribute("src");
+			
+			images[i1].classList.add("active");
+			images[i1].src = image2Src;
+			images[i2].classList.add("active");
+			images[i2].src = image1Src;		
+			
+			setTimeout(function() {
+				
+				images[i1].classList.remove("active");
+				images[i2].classList.remove("active");
+				
+			}, 500);
+			
+		}, 2500);
+			
+	} // Imgswap fucntion				
+					
 }; // Window Onload //////////////////
