@@ -87,6 +87,34 @@ window.onload = function() {
 			
 		}, 2500);
 			
-	} // Imgswap fucntion				
+	} // Imgswap fucntion	
+	
+	////////////////////////////////////
+	// Slide Out Animations
+	///////////////////////////////////
+	
+	slideOutLeft();
+	
+	function slideOutLeft() {
+				
+		var slideLefts = document.querySelectorAll(".slide-left");
+		
+		window.onscroll = function() {
+			
+			var i;
+			
+			for(i = 0; i <= slideLefts.length; i++) {
+		
+				if(window.scrollY === slideLefts[i].offsetTop) {
+				
+					alert("hey");
+					
+				}
+			
+			}
+			
+		};
+		
+	}
 					
 }; // Window Onload //////////////////

@@ -44,6 +44,11 @@ button:hover {
 	color: white;
 }
 
+.col-2 {
+	width: 50%;
+	float: left;
+}
+
 /****----------------- Sidebar------------------------****/
 
 #main-sidebar {
@@ -155,6 +160,16 @@ ul#m-s-nav li {
 #m-s-socials i:hover {
 	color: #F09;
 }
+
+/****----------------- Animation classes -----------------****/
+
+.slide-left, .slide-right {
+	height: 800px;
+	opacity: 1;
+	transition: all ease 0.5s;
+	background: grey;
+}
+
 
 /****----------------- Main Body ------------------------****/
 
@@ -268,7 +283,7 @@ ul#m-s-nav li {
 /****----------------- Intro copy ------------------------****/
 
 #intro-wrapper {
-	width: 760px;
+	width: 960px;
 	margin: auto;
 	padding: 50px 0;
 }
@@ -306,10 +321,42 @@ ul#m-s-nav li {
 	opacity: 0.5;
 }
 
+/****----------------- New launch ------------------------****/
+
+#new-launch-wrapper {
+	width: 960px;
+	padding: 50px 0;
+}
+
+#n-l-media {
+	padding: 20px 20px 20px 0px;
+}
+
+#n-l-copy {
+	padding: 20px 0px 20px 20px;
+}
+
+#n-l-copy:before {
+	width: 1px;
+	position: absolute;
+    content: '';
+    left: 0;
+    background-color: #CCC;
+}
+
+/****----------------- New Launch  ------------------------****/
+
+
+#new-launch-wrapper {
+	width: 960px;
+	margin: auto;
+}
+
+
 /****----------------- Tutorials ------------------------****/
 
 #tutorials-wrapper {
-	width: 760px;
+	width: 960px;
 	margin: auto;
 }
 
