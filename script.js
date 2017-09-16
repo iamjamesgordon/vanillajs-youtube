@@ -68,6 +68,10 @@ window.onload = function() {
 			var i1 = Math.floor(Math.random() * images.length);
 			var i2 = Math.floor(Math.random() * images.length);
 			
+			if(i1 === i2) {
+				i1 += 1;	
+			}
+			
 			// alert(i1 + " " + i2);
 			
 			var image1Src = images[i1].getAttribute("src");
@@ -91,30 +95,29 @@ window.onload = function() {
 	
 	////////////////////////////////////
 	// Slide Out Animations
-	///////////////////////////////////
+	///////////////////////////////////	
 	
-	slideOutLeft();
+	window.addEventListener('scroll', slideAnimations);
 	
-	function slideOutLeft() {
+	function slideAnimations() {
+		
+		var slides = document.querySelectorAll(".slide");	
+		
+		var i;
+		for(i = 0; i < slides.length; i++) {
+		
+			if(window.scrollY >= slides[i].parentElement.offsetTop - 300) {
+			
+				slides[i].classList.add("active");
+			
+			} else {
 				
-		var slideLefts = document.querySelectorAll(".slide-left");
-		
-		window.onscroll = function() {
-			
-			var i;
-			
-			for(i = 0; i <= slideLefts.length; i++) {
-		
-				if(window.scrollY === slideLefts[i].offsetTop) {
+				slides[i].classList.remove("active");	
 				
-					alert("hey");
-					
-				}
+			}//End if function
 			
-			}
-			
-		};
+		} // End for loop
 		
-	}
+	} // Slide Animations
 					
 }; // Window Onload //////////////////
